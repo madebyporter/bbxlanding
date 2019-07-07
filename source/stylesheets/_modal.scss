@@ -1,0 +1,40 @@
+body.modal-open {
+  overflow-y: hidden;
+  .modal.active {
+    display: block;
+  }
+}
+.modal {
+  display: none;
+  background: rgba(0,0,0,0.88);
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  position: fixed;
+}
+.modal-inner {
+  height: 100%;
+  overflow: scroll;
+  padding: $space-xl;
+  width: 100%;
+}
+.modal-page {
+  display: none;
+  &.acitve {
+    display: block;
+  }
+}
+.modal-close {
+  color: $color-black-300;
+  cursor: pointer;
+  font-weight: 700;
+  @include font-size(36);
+  position: absolute;
+  right: $space-medium;
+  top: $space-medium;
+  &:hover {
+    color: $color-white;
+  }
+}

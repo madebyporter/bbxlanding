@@ -1,0 +1,36 @@
+// _buttons.scss
+
+  .btn {
+    background: $color-gray;
+    border: 0;
+    border-radius: 0;
+    color: $color-white;
+    display: inline-block;
+    @include font-size(24);
+    font-weight: 700;
+    padding: $space-small;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+  }
+  .btn-primary {
+    background: $color-red-400;
+    color: $color-red-50;
+    &:hover {
+      background: $color-red-500;
+      color: $color-red-50;
+    }
+  }
+  .btn-secondary {
+    background: $color-black-400;
+    color: $color-black-100;
+    &:hover {
+      background: $color-black-200;
+      color: $color-black-0;
+    }
+  }
+  .btn-center-tablet {
+    @media (min-width: $mq-tablet) {
+      @include absolute-center;
+    }
+  }

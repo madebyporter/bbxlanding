@@ -1,0 +1,60 @@
+/**
+  Welcome to Variables
+**/
+
+  // Neutral Colors
+    $color-black-0:     #F5f5f5;
+    $color-black-50:    #E4E4E4;
+    $color-black-100:   #BCBCBC;
+    $color-black-200:   #909090;
+    $color-black-300:   #646464;
+    $color-black-400:   #424242;
+    $color-black-500:   #212121;
+    $color-black-600:   #1D1D1D;
+    $color-black-700:   #181818;
+    $color-black-800:   #141414;
+    $color-black-900:   #0B0B0B;
+
+  // Red Color
+    $color-red-50:      #FCE5E0;
+    $color-red-100:     #F7BFB3;
+    $color-red-200:     #F29480;
+    $color-red-300:     #ED694D;
+    $color-red-400:     #E94826;
+    $color-red-500:     #E52800;
+    $color-red-600:     #E22400;
+    $color-red-700:     #DE1E00;
+    $color-red-800:     #DA1800;
+    $color-red-900:     #D30F00;
+
+  // Orange Color
+    $color-orange-500:  #E64D01;
+
+  // Gold Color
+    $color-gold-500:    #E67300;
+
+  // Yellow Color
+    $color-yellow-500:  #E69901;
+
+  // Primary Colors
+    $color-black:       $color-black-500;
+    $color-gray:        $color-black-300;
+    $color-white:       $color-black-0;
+    $color-red:         $color-red-500;
+    $color-orange:      $color-orange-500;
+    $color-gold:        $color-gold-500;
+    $color-yellow:      $color-yellow-500;
+
+  // Media Queries
+    $mq-phonexl:        576px;
+    $mq-tablet:         768px;
+    $mq-laptop:         992px;
+    $mq-desktop:        1200px;
+    $mq-wide:           1600px;
+
+  // Spacing
+    $space-x:           1rem;
+    $space-small:       $space-x * 2; // 2rem
+    $space-medium:      $space-small * 2; // 4rem
+    $space-large:       $space-medium * 2; // 16rem
+    $space-xl:          $space-large * 2; // 32rem

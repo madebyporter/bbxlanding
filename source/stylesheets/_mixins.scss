@@ -1,0 +1,157 @@
+// _mixins.scss
+
+// Retina
+  @mixin retina-background-image($file, $type, $width, $height) {
+    background-image: url($file + '.' + $type);
+    @media #{$retina} {
+      background-image: url($file + '@2x.' + $type);
+      background-size: $width $height;
+    }
+  }
+  /* Usage: @include retina-background-image("images/video", "png", 50%, 50%); */
+
+
+// Flexbox
+  @mixin flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+  @mixin flex($values) {
+    -webkit-box-flex: $values;
+    -moz-box-flex:  $values;
+    -webkit-flex:  $values;
+    -ms-flex:  $values;
+    flex:  $values;
+  }
+  @mixin flex-wrap($values) {
+    -ms-flex-wrap: $values;
+    -webkit-flex-wrap: $values;
+    flex-wrap: $values;
+  }
+  @mixin order($val) {
+    -webkit-box-ordinal-group: $val;
+    -moz-box-ordinal-group: $val;
+    -ms-flex-order: $val;
+    -webkit-order: $val;
+    order: $val;
+  }
+
+// Font Size REM
+  @mixin font-size($sizeValue: 16) {
+    font-size: $sizeValue + px;
+    font-size: ($sizeValue / 10) + rem;
+  }
+
+// Transform
+  @mixin transform($transforms) {
+       -moz-transform: $transforms;
+         -o-transform: $transforms;
+        -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+            transform: $transforms;
+  }
+
+// Transitions
+  @mixin transition($time: 350ms, $type:all, $style:cubic-bezier(.14, .62, .39, 1), $delay:0s) {
+    -webkit-transition: $type $time $style $delay;
+    -moz-transition: $type $time $style $delay;
+    -o-transition: $type $time $style $delay;
+    transition: $type $time $style $delay;
+  }
+
+// Rotate
+  @mixin rotate ($deg) {
+    @include transform(rotate(#{$deg}deg));
+  }
+
+// Scale
+  @mixin scale($scale) {
+     @include transform(scale($scale));
+  }
+
+// Translate
+  @mixin translate ($x, $y) {
+    @include transform(translate($x, $y));
+  }
+
+// Skew
+  @mixin skew ($x, $y) {
+     @include transform(skew(#{$x}deg, #{$y}deg));
+  }
+
+// Horizontal Center
+  @mixin horizontal-center($x:-50%) {
+    left: 50%;
+    position: absolute;
+    @include translate($x,0);
+  }
+
+  // Vertical Center
+    @mixin vertical-center($y:-50%) {
+      top: 50%;
+      position: absolute;
+      @include translate(0,$y);
+    }
+
+// Absolute Center
+  @mixin absolute-center($x:-50%,$y:-50%) {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    @include translate($x,$y);
+  }
+
+// Filters
+  @mixin filter($x) {
+    -webkit-filter: $x;
+    -moz-filter: $x;
+    -o-filter: $x;
+    filter: $x;
+  }
+// Animations
+  @mixin animation($x) {
+    -webkit-animation: $x;
+    -moz-animation: $x;
+    -o-animation: $x;
+    animation: $x;
+  }
+
+// Text Hide
+  @mixin text-hide(){
+    overflow: hidden;
+    text-indent: -9999px;
+  }
+
+// Animations
+  @mixin animations($name,$delay:0s,$duration:200ms,$timing:ease-in-out,$direction:normal){
+    -webkit-animation: $name $duration $timing $delay $direction;
+    -moz-animation:    $name $duration $timing $delay $direction;
+    -o-animation:      $name $duration $timing $delay $direction;
+    animation:         $name $duration $timing $delay $direction;
+  }
+
+// No List
+  @mixin nolist {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+// Placeholder
+  @mixin placeholder($color) {
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $color;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: $color;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: $color;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: $color;
+    }
+  }

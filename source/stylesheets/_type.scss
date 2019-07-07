@@ -1,0 +1,272 @@
+// _type.scss
+
+  // System
+    .t-72 {
+      @include font-size(64);
+      @media (min-width: $mq-tablet) {
+        @include font-size(64);
+      }
+      @media (min-width: $mq-laptop) {
+        @include font-size(72);
+      }
+      @media (min-width: $mq-desktop) {
+        @include font-size(96);
+      }
+      @media (min-width: $mq-wide) {
+        @include font-size(120);
+      }
+    }
+    .t-64 {
+      @include font-size(48);
+      @media (min-width: $mq-tablet) {
+        @include font-size(48);
+      }
+      @media (min-width: $mq-laptop) {
+        @include font-size(64);
+      }
+      @media (min-width: $mq-desktop) {
+        @include font-size(72);
+      }
+      @media (min-width: $mq-wide) {
+        @include font-size(96);
+      }
+    }
+    .t-48 {
+      @include font-size(36);
+      @media (min-width: $mq-tablet) {
+        @include font-size(36);
+      }
+      @media (min-width: $mq-laptop) {
+        @include font-size(48);
+      }
+      @media (min-width: $mq-wide) {
+        @include font-size(64);
+      }
+    }
+    .t-36 {
+      @include font-size(28);
+      @media (min-width: $mq-tablet) {
+        @include font-size(28);
+      }
+      @media (min-width: $mq-laptop) {
+        @include font-size(36);
+      }
+      @media (min-width: $mq-wide) {
+        @include font-size(48);
+      }
+    }
+    .t-28 {
+      @include font-size(24);
+      @media (min-width: $mq-tablet) {
+        @include font-size(24);
+      }
+      @media (min-width: $mq-laptop) {
+        @include font-size(28);
+      }
+      @media (min-width: $mq-wide) {
+        @include font-size(36);
+      }
+    }
+    .t-24 {
+      @include font-size(18);
+      @media (min-width: $mq-tablet) {
+        @include font-size(18);
+      }
+      @media (min-width: $mq-laptop) {
+        @include font-size(24);
+      }
+      @media (min-width: $mq-wide) {
+        @include font-size(28);
+      }
+    }
+    .t-18 {
+      @include font-size(16);
+      @media (min-width: $mq-tablet) {
+        @include font-size(16);
+      }
+      @media (min-width: $mq-laptop) {
+        @include font-size(18);
+      }
+      @media (min-width: $mq-wide) {
+        @include font-size(24);
+      }
+    }
+    .t-16 {
+      @include font-size(14);
+      @media (min-width: $mq-tablet) {
+        @include font-size(14);
+      }
+      @media (min-width: $mq-laptop) {
+        @include font-size(16);
+      }
+      @media (min-width: $mq-wide) {
+        @include font-size(18);
+      }
+    }
+    .t-14 {
+      @include font-size(12);
+      @media (min-width: $mq-tablet) {
+        @include font-size(12);
+      }
+      @media (min-width: $mq-laptop) {
+        @include font-size(14);
+      }
+      @media (min-width: $mq-wide) {
+        @include font-size(16);
+      }
+    }
+    .t-12 {
+      @include font-size(10);
+      @media (min-width: $mq-tablet) {
+        @include font-size(10);
+      }
+      @media (min-width: $mq-laptop) {
+        @include font-size(12);
+      }
+      @media (min-width: $mq-wide) {
+        @include font-size(14);
+      }
+    }
+    .t-10 {
+      @include font-size(8);
+      @media (min-width: $mq-tablet) {
+        @include font-size(8);
+      }
+      @media (min-width: $mq-laptop) {
+        @include font-size(10);
+      }
+      @media (min-width: $mq-wide) {
+        @include font-size(12);
+      }
+    }
+    .t-light {
+      font-weight: 300;
+    }
+    .t-book {
+      font-weight: 400;
+    }
+    .t-strong {
+      font-weight: 700;
+    }
+
+  // Links
+    a {
+      color: $color-red;
+      font-weight: 700;
+      text-decoration: none;
+      &:hover {
+        color: $color-yellow;
+        text-decoration: none;
+      }
+    }
+
+  // Paragraphs
+    p, ul, li, span {
+      color: $color-black-100;
+      font-weight: 500;
+      @include font-size(18);
+      line-height: 1.4;
+      margin: 0 0 $space-x 0;
+      @media (min-width: $mq-tablet) {
+        @include font-size(24);
+      }
+      &.content-large {
+        @include font-size(24);
+        margin: 0 0 $space-small 0;
+        @media (min-width: $mq-tablet) {
+          @include font-size(28);
+        }
+      }
+      &.content-small {
+        @include font-size(14);
+        line-height: 1.4;
+        @media (min-width: $mq-tablet) {
+          @include font-size(18);
+        }
+      }
+      &.content-disabled {
+        opacity: .3;
+      }
+    }
+
+    strong {
+      color: $color-white;
+      font-weight: 700;
+    }
+
+  // Headers
+    h1, h2, h3, h4, h5, h6 {
+      color: $color-white;
+      display: block;
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0 0 $space-small 0;
+      &.bottom-margin-none {
+        margin: 0 0 0 0;
+      }
+      &.bottom-margin-small {
+        margin: 0 0 $space-small 0;
+      }
+    }
+
+    h1 {
+      @extend .t-64;
+    }
+
+    h2 {
+      @extend .t-48;
+    }
+
+    h3 {
+      @extend .t-36;
+    }
+
+    h4 {
+      @extend .t-24;
+    }
+
+    p + h1, p + h2, p + h3, p + h4, p + h5, p + h6 {
+      margin-top: $space-medium;
+    }
+
+  // Blockquotes
+    blockquote {
+      p {
+        // font-family: $font-secondary;
+        @include font-size(40);
+        font-style: italic;
+        font-weight: 700;
+      }
+    }
+
+  // Lists
+    ul {
+      list-style: disc;
+      margin: 0 0 20px 20px;
+      li {
+        // @include font-size(24);
+        margin-bottom: 10px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .no-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        margin-bottom: 0;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+    }
+
+    .content-center {
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+    }

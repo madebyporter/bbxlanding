@@ -1,0 +1,90 @@
+---
+title: Sensory - A Psychedelic Hiphop Experience
+shortname: Home
+---
+script type="text/javascript" src="/javascripts/sc-player.js"
+
+section.block.block-section.block-hero
+  .container
+    .row
+      .col-12
+        .row
+          .col-md-12.col-lg-9
+            h1.headline-large
+              | Sensory
+            h3
+              | A Psychedelic Hiphop Listening Experience.
+        .row
+          .col-md-12.col-lg-6
+            p.content
+              | With up to 13 tracks, Sensory is the latest hiphop instrumental album by Porter. Choose from one of the streaming providers below to get the experience the way you want:
+section.block.block-section
+  .container
+    .row
+      .col-12.col-lg-6
+        .player
+          h4
+            | Listen now
+          
+          // Soundcloud Track List
+          .sc-player
+            // Copy your playlist here
+            a href="https://soundcloud.com/madebyporter/sets/sensory" Sensory
+      .col-12.col-lg-6
+        .row
+          .col-12
+            h4
+              | Stream via
+          .col-6.col-md-6
+            .block-logo
+              = link_to "https://open.spotify.com/album/7v0kXBd5WtL6UKRshysA8a", :class => "block-logo-link" do
+                = image_tag "logos/logo-spotify.png", :alt => "Spotify", :class => "block-logo-img"
+          .col-6.col-md-6
+            .block-logo
+              = link_to "https://tidal.com/album/109183870", :class => "block-logo-link" do
+                = image_tag "logos/logo-tidal.png", :alt => "Tidal", :class => "block-logo-img"
+          .col-6.col-md-4
+            .block-logo.block-logo-small
+              = link_to "https://itunes.apple.com/us/album/sensory/1463260455?app=apple%20music&ign-mpt=uo%3D4", :class => "block-logo-link" do
+                = image_tag "logos/logo-applemusic.png", :alt => "Apple Music", :class => "block-logo-img"
+          .col-6.col-md-4
+            .block-logo.block-logo-small
+              = link_to "https://www.youtube.com/playlist?list=OLAK5uy_msB1o9yA_DzjmHxSG9yzgJMW0BE0BplgY", :class => "block-logo-link" do
+                = image_tag "logos/logo-youtube.png", :alt => "Youtube", :class => "block-logo-img"
+          .col-6.col-md-4
+            .block-logo.block-logo-small
+              = link_to "https://www.amazon.com/Sensory-Porter/dp/B07RNCB47P/ref=sr_1_1?keywords=sensory+porter&qid=1557857412&s=gateway&sr=8-1", :class => "block-logo-link" do
+                = image_tag "logos/logo-amazon.png", :alt => "Amazon", :class => "block-logo-img"
+          .col-6.col-md-4
+            .block-logo.block-logo-small
+              = link_to "https://soundcloud.com/madebyporter/sets/sensory", :class => "block-logo-link" do
+                = image_tag "logos/logo-soundcloud.png", :alt => "Soundcloud", :class => "block-logo-img"
+          .col-6.col-md-4
+            .block-logo.block-logo-small
+              = link_to "https://madebyporter.bandcamp.com/album/sensory", :class => "block-logo-link" do
+                = image_tag "logos/logo-bandcamp.png", :alt => "Bandcamp", :class => "block-logo-img"
+          .col-6.col-md-4
+            .block-logo.block-logo-small
+              = link_to "https://www.deezer.com/us/album/96593242", :class => "block-logo-link" do
+                = image_tag "logos/logo-deezer.png", :alt => "Deezer", :class => "block-logo-img"
+          .col-6.col-md-4
+            .block-logo.block-logo-small
+              = link_to "https://play.google.com/store/music/album/Porter_Sensory?id=Bgko2sptzhwke6bcbhnpi7cq4tq&hl=en", :class => "block-logo-link" do
+                = image_tag "logos/logo-googleplay.png", :alt => "Google Play", :class => "block-logo-img"
+          .col-6.col-md-4
+            .block-logo.block-logo-small
+              = link_to "https://itunes.apple.com/us/album/sensory/1463260455?app=itunes&ign-mpt=uo%3D4", :class => "block-logo-link" do
+                = image_tag "logos/logo-itunes.png", :alt => "iTunes", :class => "block-logo-img"
+          .col-6.col-md-4
+            .block-logo.block-logo-small
+              = link_to "https://us.napster.com/artist/porter-ambient/album/sensory", :class => "block-logo-link" do
+                = image_tag "logos/logo-napster.png", :alt => "Napster", :class => "block-logo-img"
+section.block.block-cta
+  .container
+    .row.block-cta-inner
+      .col-12.col-sm-8.offset-sm-2.col-md-5.offset-md-0
+        h4.sub-title For $7/mo
+        h3.cta-header.bottom-margin-small
+          | Use the music from Sensory in your next project today.
+      .col-12.col-sm-8.offset-sm-2.col-md-4.offset-md-2
+        = link_to "Sign Up", "signup.html", :class => "btn btn-primary btn-center-tablet"

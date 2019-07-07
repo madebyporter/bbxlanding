@@ -1,0 +1,87 @@
+doctype html
+html
+  head
+    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
+    meta charset="utf-8"
+    meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"
+    meta name="description" content="The Beatbox Club allows you access to instrumental songs under the Creative Commons. You pay for the updates, you get unlimited usage rap beats for your next project."
+
+    link[rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png"]
+    link[rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png"]
+    link[rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png"]
+    link[rel="manifest" href="/images/favicons/site.webmanifest"]
+    link[rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#5bbad5"]
+    link[rel="shortcut icon" href="/images/favicons/favicon.ico"]
+    meta[name="msapplication-TileColor" content="#da532c"]
+    meta[name="msapplication-config" content="/images/favicons/browserconfig.xml"]
+    meta[name="theme-color" content="#ffffff"]
+
+    title = current_page.data.title || "The Beatbox Club"
+
+    == stylesheet_link_tag :site
+    == javascript_include_tag  "jquery", "all"
+
+    // Global site tag (gtag.js) - Google Analytics
+    script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-59805983-1"
+    javascript:
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-59805983-1');
+
+  body class="#{page_classes}"
+    main.site-wrapper
+      header.block.block-header
+        .container
+          .row
+            .col-12
+              = link_to "/", :class => "site-logo" do
+                .logo
+                  .logo-block
+                  .logo-block
+                  .logo-block
+                  .logo-block
+                  .logo-block
+                  .logo-block
+                  .logo-block
+                  .logo-block
+                  .logo-block
+                  .logo-block
+                  .logo-block
+                  .logo-block
+                  .logo-block
+                  .logo-block
+                  .logo-block
+                  .logo-block
+                .logo-text
+                  span.logo-text-word The
+                  span.logo-text-word Beatbox
+                  span.logo-text-word Club
+      == yield
+      footer.block.block-footer
+        .container
+          .row
+            .col-12
+              div id="mc_embed_signup"
+                form.newsletter action="mailchimp" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="novalidate"
+                  .row
+                    .col-lg-12
+                      h3.bottom-margin-small
+                        | Enter your email address to get occasional updates on special offers, products and events.
+                      input type="hidden" name="MMERGE3" id="mce-MMERGE3" value="Free"
+                  .row
+                    .col-lg-3
+                      fieldset.form-fieldset
+                        input.form-input type="text" placeholder="First Name" name="FNAME" id="mce-FNAME"
+                    .col-lg-6
+                      fieldset.form-fieldset
+                        input.form-input type="email" placeholder="Email" name="EMAIL" id="mce-EMAIL"
+                    .col-lg-3
+                      fieldset.form-fieldset
+                        input.form-submit.btn.btn-secondary type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" onclick="ga('send', 'event', 'Subscribe', 'click', 'Micro', '0');"
+
+          .row
+            .col-12
+              nav.nav-footer
+                = link_to "Home", "/", :class => "nav-footer-link modal-link"

@@ -1,0 +1,341 @@
+@charset "utf-8";
+@import "bootstrap-grid.min.css";
+@import "normalize";
+@import "variables";
+@import "mixins";
+@import "type";
+@import "buttons";
+@import "forms";
+@import "animations";
+@import "modal";
+
+// Universal
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+  html {
+    font-size: 62.5%;
+    height: 100%;
+    width: 100%;
+    // overflow: hidden;
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+  }
+  body {
+    background: $color-black;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    &.index {
+      background: url('../images/site-bg-sensory-mobile.jpg') no-repeat scroll right top #111427;
+      background-size: 100% auto;
+      @media (min-width: $mq-tablet) {
+        background: url('../images/site-bg-sensory-desktop.jpg') no-repeat scroll right top #111427;
+        background-size: cover;
+      }
+      .block-cta, .block-footer, .newsletter {
+        background: #0F1021;
+        border-bottom: 1px solid #282A57;
+      }
+      p {
+        color: rgba(255,255,255,0.7);
+        font-weight: 400;
+      }
+      .sub-title {
+        color: #8D91D9;
+      }
+      ::placeholder {
+        -webkit-text-fill-color: lighten(#0F1021, 45%);
+      }
+      ::-ms-input-placeholder {
+        -webkit-text-fill-color: lighten(#0F1021, 45%);
+      }
+      .form-input {
+        background: lighten(#0F1021, 5%);
+        color: lighten(#0F1021, 75%);
+        &:focus, &:hover {
+          background: lighten(#0F1021, 15%);
+        }
+      }
+      .nav-footer a {
+        color: lighten(#0F1021, 35%);
+        &:hover {
+          color: lighten(#0F1021, 45%);
+        }
+      }
+      .btn-secondary {
+        background: lighten(#0F1021, 35%);
+        color: lighten(#0F1021, 75%);
+        &:hover {
+          background: lighten(#0F1021, 40%);
+          color: $color-white;
+        }
+      }
+    }
+  }
+
+// Masthead
+  .site-logo {
+    display: block;
+    height: 80px;
+    width: auto;
+    @include flexbox;
+    @include flex-wrap(nowrap);
+    text-decoration: none;
+    .logo {
+      @include flexbox;
+      @include flex-wrap(wrap);
+      height: 100%;
+      width: 80px;
+      &:hover {
+        .logo-block {
+          &:nth-child(1), &:nth-child(16){
+            animation: pulse 600ms alternate infinite;
+          }
+          &:nth-child(2), &:nth-child(15){
+            animation: pulse2 600ms ease 200ms alternate infinite;
+          }
+          &:nth-child(3), &:nth-child(14){
+            animation: pulse3 600ms ease 300ms alternate infinite;
+          }
+          &:nth-child(4), &:nth-child(13){
+            animation: pulse4 600ms ease 400ms alternate infinite;
+          }
+          &:nth-child(5), &:nth-child(12){
+            animation: pulse6 600ms ease 500ms alternate infinite;
+          }
+          &:nth-child(6), &:nth-child(11){
+            animation: pulse8 600ms ease 600ms alternate infinite;
+          }
+          &:nth-child(7), &:nth-child(10){
+            animation: pulse8 600ms ease 700ms alternate infinite;
+          }
+          &:nth-child(8), &:nth-child(9){
+            animation: pulse6 600ms ease 800ms alternate infinite;
+          }
+        }
+      }
+    }
+    .logo-block {
+      background: #222;
+      box-shadow: 0 0 0 rgba(0,0,0,0.2);
+      flex: 0 1 25%;
+      height: 25% 25vh;
+      &:nth-child(1), &:nth-child(16){
+        background: #E52800;
+        z-index: 1;
+      }
+      &:nth-child(2), &:nth-child(15){
+        background: #E64D01;
+        z-index: 2;
+      }
+      &:nth-child(3), &:nth-child(14){
+        background: #E67300;
+        z-index: 3;
+      }
+      &:nth-child(4), &:nth-child(13){
+        background: #E79901;
+        z-index: 4;
+      }
+      &:nth-child(5), &:nth-child(12){
+        background: #E63917;
+        z-index: 5;
+      }
+      &:nth-child(6), &:nth-child(11){
+        background: #E76B2F;
+        z-index: 6;
+      }
+      &:nth-child(7), &:nth-child(10){
+        background: #E69544;
+        z-index: 7;
+      }
+      &:nth-child(8), &:nth-child(9){
+        background: #E6B75B;
+        z-index: 6;
+      }
+    }
+    img {
+      width: 100%;
+    }
+    .logo-text {
+      display: block;
+      margin: .4rem 0 0 $space-small;
+      width: 80px;
+    }
+    .logo-text-word {
+      color: $color-white;
+      @include font-size(18);
+      font-weight: 700;
+      display: inline-block;
+      margin: 0;
+    }
+  }
+
+  .site-wrapper {
+    width: 100%;
+
+  }
+
+  .block {
+    margin: 0 auto $space-medium;
+    padding: 0 $space-x;
+    @media (min-width: $mq-tablet) {
+      padding: 0;
+    }
+  }
+
+  .block-header {
+    // background: lighten($color-black-500,2%);
+    padding: $space-large $space-x $space-medium;
+    @media (min-width: $mq-tablet) {
+      padding: $space-large 0 $space-medium;
+    }
+  }
+  .block-content {
+    margin-bottom: $space-large;
+  }
+
+  .block-cta {
+    background: lighten($color-black-500,2%);
+    border-bottom: 1px solid $color-black-400;
+    box-shadow: -600px 0 0 lighten($color-black-500,2%), 600px 0 0 lighten($color-black-500,2%);
+    margin-bottom: 0;
+    padding: $space-large $space-x;
+    @media (min-width: $mq-tablet) {
+      padding: $space-large 0;
+    }
+  }
+
+  .cta-header {
+    @media (min-width: $mq-tablet) {
+      margin: 0;
+      text-align: left;
+    }
+  }
+  .block-footer {
+    background: lighten($color-black-500,2%);
+    margin-bottom: 0;
+    padding: $space-medium $space-x;
+    @media (min-width: $mq-tablet) {
+      padding: $space-large 0;
+    }
+  }
+  .nav-footer {
+    @include flexbox;
+    @include flex-wrap(wrap);
+    text-align: center;
+    justify-content: center;
+    @media (min-width: $mq-laptop) {
+      @include flex-wrap(nowrap);
+    }
+  }
+  .nav-footer-link {
+    color: $color-gray;
+    font-weight: 700;
+    @include font-size(18);
+    margin: 0 $space-x;
+    padding: $space-small 0;
+    text-decoration: none;
+    width: 100%;
+    @media (min-width: $mq-laptop) {
+      padding: 0 0;
+      width: auto;
+    }
+    &:hover {
+      color: $color-white;
+    }
+  }
+  .newsletter {
+    border-bottom: 1px solid $color-black-400;
+    margin: 0 0 $space-medium 0;
+    padding: 0 0 $space-small 0;
+  }
+
+  .block-logo {
+    border: 1px solid #282A57;
+    height: 160px;
+    margin: 0 0 $space-small 0;
+    width: 100%;
+    &:hover {
+      border: 1px solid #4B4FA3;
+      .block-logo-img {
+        @include scale(1.05);    
+      }
+    }
+  }
+  .block-logo-small {
+    @media (min-width: $mq-laptop) {
+      height: 110px;
+    }
+  }
+  .block-logo-link {
+    align-items: center;
+    @include flexbox;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  .block-logo-img {
+    width: 50%;
+    @include scale(1);
+  }
+
+  .player {
+    margin: 0 0 $space-medium;
+    .sc-artwork-list, .sc-info, .sc-scrubber, .sc-time-indicators, .sc-info, .sc-info-toggle {
+      display: none;
+    }
+    .sc-controls {
+      background: $color-gold;
+      position: fixed;
+      height: 40px;
+      width: 40px;
+      @include flexbox;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      bottom: $space-x;
+      left: $space-x;
+      z-index: 1000;
+    }
+    .sc-play {
+      @include text-hide;
+      background: url('../images/icon-play.svg') no-repeat center;
+      background-size: 10px;
+      height: 24px;
+      width: 24px;
+    }
+    .sc-pause {
+      @include text-hide;
+      background: url('../images/icon-pause.svg') no-repeat center;
+      background-size: 10px;
+      height: 24px;
+      width: 24px;
+    }
+    .sc-trackslist {
+      margin: 0;
+      .sc-track {
+        cursor: pointer;
+        &:hover {
+          .sc-track-title {
+            color: $color-yellow;
+          }
+        }
+      }
+      .sc-track.active .sc-track-title {
+        color: $color-yellow;
+      }
+    }
+    .sc-track-duration {
+      color: rgba(255,255,255,0.3);
+      @extend .t-14;
+      padding: 0 0 0 $space-x;
+    }
+  }
