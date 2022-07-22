@@ -68,10 +68,6 @@ GEM
       middleman-cli (= 4.2.1)
       middleman-core (= 4.2.1)
       sass (>= 3.4.0, < 4.0)
-    middleman-blog (4.0.2)
-      addressable (~> 2.3)
-      middleman-core (~> 4.0)
-      tzinfo (>= 0.3.0)
     middleman-cli (4.2.1)
       thor (>= 0.17.0, < 2.0)
     middleman-core (4.2.1)
@@ -97,9 +93,6 @@ GEM
       servolux
       tilt (~> 2.0)
       uglifier (~> 3.0)
-    middleman-dotenv (2.0.0)
-      dotenv (>= 2.0)
-      middleman-core (>= 4.0)
     middleman-livereload (3.4.6)
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
@@ -136,7 +129,7 @@ GEM
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
-    tzinfo (1.2.5)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
@@ -150,8 +143,6 @@ PLATFORMS
 DEPENDENCIES
   contentful_middleman
   middleman (>= 4.0.0)
-  middleman-blog (~> 4.0)
-  middleman-dotenv
   middleman-livereload
   middleman-sprockets (>= 4.0.0)
   slim (>= 3.0)
