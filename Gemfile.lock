@@ -6,8 +6,8 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    addressable (2.6.0)
-      public_suffix (>= 2.0.2, < 4.0)
+    addressable (2.8.1)
+      public_suffix (>= 2.0.2, < 6.0)
     backports (3.11.4)
     coffee-script (2.4.1)
       coffee-script-source
@@ -68,10 +68,6 @@ GEM
       middleman-cli (= 4.2.1)
       middleman-core (= 4.2.1)
       sass (>= 3.4.0, < 4.0)
-    middleman-blog (4.0.2)
-      addressable (~> 2.3)
-      middleman-core (~> 4.0)
-      tzinfo (>= 0.3.0)
     middleman-cli (4.2.1)
       thor (>= 0.17.0, < 2.0)
     middleman-core (4.2.1)
@@ -97,9 +93,6 @@ GEM
       servolux
       tilt (~> 2.0)
       uglifier (~> 3.0)
-    middleman-dotenv (2.0.0)
-      dotenv (>= 2.0)
-      middleman-core (>= 4.0)
     middleman-livereload (3.4.6)
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
@@ -116,7 +109,7 @@ GEM
     padrino-support (0.13.3.4)
       activesupport (>= 3.1)
     parallel (1.13.0)
-    public_suffix (3.0.3)
+    public_suffix (5.0.0)
     rack (2.0.6)
     rack-livereload (0.3.17)
       rack
@@ -150,8 +143,6 @@ PLATFORMS
 DEPENDENCIES
   contentful_middleman
   middleman (>= 4.0.0)
-  middleman-blog (~> 4.0)
-  middleman-dotenv
   middleman-livereload
   middleman-sprockets (>= 4.0.0)
   slim (>= 3.0)
